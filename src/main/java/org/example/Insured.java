@@ -10,7 +10,7 @@ public class Insured {
     private String afm;
     private String amka;
     private String name;
-    private LocalDate birthdate;
+    private Date birthdate;
     private String surname;
     private String email;
     private Reservation reservation;
@@ -18,7 +18,7 @@ public class Insured {
     private Doctor doctor=null;
     private Vaccination vaccinationCoverage=null;
 
-    public Insured(String afm, String amka, String name, LocalDate birthdate, String surname, String email) {
+    public Insured(String afm, String amka, String name, Date birthdate, String surname, String email) {
         this.afm = afm;
         this.amka = amka;
         this.name = name;
@@ -97,7 +97,7 @@ public class Insured {
         return afm;
     }
 
-    public LocalDate getBirthdate() {
+    public Date getBirthdate() {
         return birthdate;
     }
 

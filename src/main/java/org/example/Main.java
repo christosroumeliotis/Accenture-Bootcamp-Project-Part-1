@@ -1,6 +1,4 @@
 package org.example;
-
-import java.time.LocalDate;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -16,21 +14,21 @@ public class Main {
 
 
         ArrayList<Insured> insureds = new ArrayList<>();
-        Insured insured1 =new Insured("171054858","82167","Kostas",new LocalDate(1944,Calendar.DECEMBER,4),"Papadopoulos","papadko@gmail.com");
-        Insured insured2 =new Insured("174564856","58356","Eleni",new LocalDate(2004,Calendar.JANUARY,8),"Avani","eleniav@gmail.com");
-        Insured insured3 =new Insured("123054856","75746","Maria",new LocalDate(1991,Calendar.JULY,8),"Davi","davimar@gmail.com");
-        Insured insured4 =new Insured("975644855","28907","Ioanna",new LocalDate(1934,Calendar.FEBRUARY,7),"Dagmati","iodag@gmail.com");
-        Insured insured5 =new Insured("458054856","46289","Leonidas",new LocalDate(2010,Calendar.JUNE,6),"Aggelidis","lagge@gmail.com");
-        Insured insured6 =new Insured("171058256","71356","Giorgos",new LocalDate(1946,Calendar.AUGUST,3),"Eugenidis","gioeuge@gmail.com");
-        Insured insured7 =new Insured("163784857","46456","Giannis",new LocalDate(1952,Calendar.DECEMBER,12),"Moustakas","moustakasg@gmail.com");
-        Insured insured8 =new Insured("128054856","98654","Christos",new LocalDate(2002,Calendar.JULY,15),"Staikos","christaikos@gmail.com");
-        Insured insured9 =new Insured("368094856","57432","Anna",new LocalDate(1932,Calendar.DECEMBER,18),"Thanou","annathanou@gmail.com");
-        Insured insured10 =new Insured("171026796","16845","Sofia",new LocalDate(1993,Calendar.JULY,22),"Okalidou","sogiako@gmail.com");
-        Insured insured11 =new Insured("465054856","98457","Petros",new LocalDate(1924,Calendar.AUGUST,26),"Kalogeras","petrosk@gmail.com");
-        Insured insured12 =new Insured("171069459","25785","Vasilis",new LocalDate(2016,Calendar.AUGUST,12),"Vlassis","vasvas@gmail.com");
-        Insured insured13 =new Insured("573984856","45356","Kostas",new LocalDate(1993,Calendar.DECEMBER,10),"Empeiros","empeirosko@gmail.com");
-        Insured insured14 =new Insured("171038566","75845","Maria",new LocalDate(1997,Calendar.AUGUST,9),"Papadopoulou","mariapapado@gmail.com");
-        Insured insured15 =new Insured("592560956","35980","Alexandros",new LocalDate(2003,Calendar.FEBRUARY,1),"Pasalidis","alexpas@gmail.com");
+        Insured insured1 = new Insured("171054858", "82167", "Kostas", new Date(1944, Calendar.DECEMBER, 4), "Papadopoulos", "papadko@gmail.com");
+        Insured insured2 = new Insured("174564856", "58356", "Eleni", new Date(2004, Calendar.JANUARY, 8), "Avani", "eleniav@gmail.com");
+        Insured insured3 = new Insured("123054856", "75746", "Maria", new Date(1991, Calendar.JULY, 8), "Davi", "davimar@gmail.com");
+        Insured insured4 = new Insured("975644855", "28907", "Ioanna", new Date(1934, Calendar.FEBRUARY, 7), "Dagmati", "iodag@gmail.com");
+        Insured insured5 = new Insured("458054856", "46289", "Leonidas", new Date(2010, Calendar.JUNE, 6), "Aggelidis", "lagge@gmail.com");
+        Insured insured6 = new Insured("171058256", "71356", "Giorgos", new Date(1946, Calendar.AUGUST, 3), "Eugenidis", "gioeuge@gmail.com");
+        Insured insured7 = new Insured("163784857", "46456", "Giannis", new Date(1952, Calendar.DECEMBER, 12), "Moustakas", "moustakasg@gmail.com");
+        Insured insured8 = new Insured("128054856", "98654", "Christos", new Date(2002, Calendar.JULY, 15), "Staikos", "christaikos@gmail.com");
+        Insured insured9 = new Insured("368094856", "57432", "Anna", new Date(1932, Calendar.DECEMBER, 18), "Thanou", "annathanou@gmail.com");
+        Insured insured10 = new Insured("171026796", "16845", "Sofia", new Date(1993, Calendar.JULY, 22), "Okalidou", "sogiako@gmail.com");
+        Insured insured11 = new Insured("465054856", "98457", "Petros", new Date(1924, Calendar.AUGUST, 26), "Kalogeras", "petrosk@gmail.com");
+        Insured insured12 = new Insured("171069459", "25785", "Vasilis", new Date(2016, Calendar.AUGUST, 12), "Vlassis", "vasvas@gmail.com");
+        Insured insured13 = new Insured("573984856", "45356", "Kostas", new Date(1993, Calendar.DECEMBER, 10), "Empeiros", "empeirosko@gmail.com");
+        Insured insured14 = new Insured("171038566", "75845", "Maria", new Date(1997, Calendar.AUGUST, 9), "Papadopoulou", "mariapapado@gmail.com");
+        Insured insured15 = new Insured("592560956", "35980", "Alexandros", new Date(2003, Calendar.FEBRUARY, 1), "Pasalidis", "alexpas@gmail.com");
 
         insureds.add(insured1);
         insureds.add(insured2);
