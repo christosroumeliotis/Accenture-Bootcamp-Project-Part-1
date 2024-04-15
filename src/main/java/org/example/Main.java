@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.entities.Doctor;
+import org.example.entities.Insured;
+import org.example.entities.Timeslot;
+import org.example.entities.VaccinationCenter;
+
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Calendar;
