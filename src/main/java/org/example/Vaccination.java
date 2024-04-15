@@ -12,4 +12,8 @@ public class Vaccination {
         this.vaccinationDate = vaccinationDate;
         this.expirationDate = expirationDate;
     }
+
+    public String returnInfo(){
+        return "Vaccination date:"+ vaccinationDate+" Expiration day after 2 years: "+expirationDate;
+    }
 }
