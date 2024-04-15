@@ -9,8 +9,13 @@ public class Reservation {
         this.timeslot = timeslot;
     }
 
-    public void printInfo(){
-        System.out.print("Insured: "+insured.getName()+" "+insured.getSurname()+" AFM: "+insured.getAfm()+" AMKA: "+insured.getAmka()+" ");
-        timeslot.printTimeslot();
+    public Timeslot getTimeslot() {
+        return timeslot;
     }
+
+    public String returnReservation(){
+        return insured.getName()+" "+insured.getSurname()+" has reservation for "+ timeslot.getTimeslotDateAndTime();
+    }
+
+
 }

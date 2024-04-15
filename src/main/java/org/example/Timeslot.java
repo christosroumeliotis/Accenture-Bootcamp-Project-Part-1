@@ -1,31 +1,32 @@
 package org.example;
 
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class Timeslot {
-    //validate with try catch or throw
-    private String day;
-    private String month;
-    private int year;
-    private int hour;
-    private int minutes;
+
+    private Date timeslotDateAndTime;
     private int startMinutes;
     private int endMinutes;
     private Doctor doctor;
 
 
-    public Timeslot(String day, String month, int year, int hour, int minutes, int startMinutes, int endMinutes, Doctor doctor) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-        this.hour = hour;
-        this.minutes = minutes;
-        this.startMinutes = startMinutes;
-        this.endMinutes = endMinutes;
+    public Timeslot(Date timeslotDateAndTime,Doctor doctor) {
+        this.timeslotDateAndTime=timeslotDateAndTime;
+        this.startMinutes = timeslotDateAndTime.getMinutes();
+        this.endMinutes = timeslotDateAndTime.getMinutes()+15;
         this.doctor = doctor;
-
+        doctor.addTimeslot(this);//με το που φτιαχνεται το ταιμσλοτ προστιθεται και στον γιατρο
     }
 
-    public void printTimeslot(){
-        System.out.print("Timeslot: "+day+month+year+" "+hour+":"+minutes);
+    public String getTimeslotDateAndTime() {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+        String strDate= formatter.format(timeslotDateAndTime);
+        return strDate;
     }
 
+    public Date getDate(){
+        return timeslotDateAndTime;
+    }
 }
