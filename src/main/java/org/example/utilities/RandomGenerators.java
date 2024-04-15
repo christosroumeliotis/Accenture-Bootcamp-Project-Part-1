@@ -1,6 +1,6 @@
 package org.example.utilities;
 
-import org.example.Insured;
+import org.example.entities.Insured;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
