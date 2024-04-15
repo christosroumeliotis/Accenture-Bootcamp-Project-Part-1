@@ -13,9 +13,7 @@ public class Reservation {
         return timeslot;
     }
 
-    public String returnReservation(){
-        return insured.getName()+" "+insured.getSurname()+" has reservation for "+ timeslot.getTimeslotDateAndTime();
+    public String returnReservation() {
+        return insured.getName() + " " + insured.getSurname() + " has reservation for " + timeslot.getTimeslotDateAndTime();
     }
-
-
 }

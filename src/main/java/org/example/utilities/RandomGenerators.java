@@ -24,8 +24,12 @@ public class RandomGenerators {
             surname = LAST_NAMES[random.nextInt(LAST_NAMES.length)];
             afm = String.format("%09d", Math.abs(random.nextInt()));
             birthdate = LocalDate.now().minusYears(random.nextInt(10, 91));
-            amka = String.format("%02d", birthdate.getDayOfMonth()) + String.format("%02d", birthdate.getMonthValue()) + birthdate.getYear();
-            insureds.add(new Insured(afm, amka, name, Converters.convertLocaleDateToDate(birthdate), surname, name + "." + surname + "@gmail.com"));
+            StringBuilder amkaSecondPart = new StringBuilder();
+            for (int j = 0; j < 5; j++) {
+                amkaSecondPart.append(random.nextInt(0, 10));
+            }
+            amka = String.format("%02d", birthdate.getDayOfMonth()) + String.format("%02d", birthdate.getMonthValue()) + String.valueOf(birthdate.getYear()).substring(2) + amkaSecondPart;
+            insureds.add(new Insured(afm, amka, name, Converters.convertLocalDateToDate(birthdate), surname, name + "." + surname + "@gmail.com"));
         }
         return insureds;
     }
