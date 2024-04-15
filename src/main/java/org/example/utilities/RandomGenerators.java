@@ -25,7 +25,7 @@ public class RandomGenerators {
             afm = String.format("%09d", Math.abs(random.nextInt()));
             birthdate = LocalDate.now().minusYears(random.nextInt(10, 91));
             amka = String.format("%02d", birthdate.getDayOfMonth()) + String.format("%02d", birthdate.getMonthValue()) + birthdate.getYear();
-            insureds.add(new Insured(afm, amka, name, birthdate, surname, name + "." + surname + "@gmail.com"));
+            insureds.add(new Insured(afm, amka, name, Converters.convertLocaleDateToDate(birthdate), surname, name + "." + surname + "@gmail.com"));
         }
         return insureds;
     }
