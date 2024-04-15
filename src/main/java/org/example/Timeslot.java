@@ -1,7 +1,6 @@
 package org.example;
 
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Timeslot {
@@ -11,22 +10,21 @@ public class Timeslot {
     private int endMinutes;
     private Doctor doctor;
 
-
-    public Timeslot(Date timeslotDateAndTime,Doctor doctor) {
-        this.timeslotDateAndTime=timeslotDateAndTime;
+    public Timeslot(Date timeslotDateAndTime, Doctor doctor) {
+        this.timeslotDateAndTime = timeslotDateAndTime;
         this.startMinutes = timeslotDateAndTime.getMinutes();
-        this.endMinutes = timeslotDateAndTime.getMinutes()+15;
+        this.endMinutes = timeslotDateAndTime.getMinutes() + 15;
         this.doctor = doctor;
         doctor.addTimeslot(this);//με το που φτιαχνεται το ταιμσλοτ προστιθεται και στον γιατρο
     }
 
     public String getTimeslotDateAndTime() {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-        String strDate= formatter.format(timeslotDateAndTime);
+        String strDate = formatter.format(timeslotDateAndTime);
         return strDate;
     }
 
-    public Date getDate(){
+    public Date getDate() {
         return timeslotDateAndTime;
     }
 }

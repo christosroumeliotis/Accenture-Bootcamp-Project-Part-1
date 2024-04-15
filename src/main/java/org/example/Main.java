@@ -1,4 +1,5 @@
 package org.example;
+
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -11,8 +12,6 @@ public class Main {
         /*ΓΕΝΙΚΑ:Με το που δημιουργείται ένα timeslot ανατίθεται και σε γιατρό
                  Μετά ο γιατρός ανατίθεται σε center με όλα του τα timeslots
                  Ασφαλισμένος διαλέγει γιατρό και ώρα που θέλει να εμβολιαστεί*/
-
-
         ArrayList<Insured> insureds = new ArrayList<>();
         Insured insured1 = new Insured("171054858", "82167", "Kostas", new Date(1944, Calendar.DECEMBER, 4), "Papadopoulos", "papadko@gmail.com");
         Insured insured2 = new Insured("174564856", "58356", "Eleni", new Date(2004, Calendar.JANUARY, 8), "Avani", "eleniav@gmail.com");
@@ -46,51 +45,51 @@ public class Main {
         insureds.add(insured14);
         insureds.add(insured15);
 
-        VaccinationCenter vc1 = new VaccinationCenter("VC123","EDW 13");
-        VaccinationCenter vc2 = new VaccinationCenter("VC756","EKEI 56");
+        VaccinationCenter vc1 = new VaccinationCenter("VC123", "EDW 13");
+        VaccinationCenter vc2 = new VaccinationCenter("VC756", "EKEI 56");
 
-        Doctor doctor1 = new Doctor(46982,"Axilleas","Paraskevopoulos");
-        Doctor doctor2 = new Doctor(56788,"Mihalis","Stravelas");
-        Doctor doctor3 = new Doctor(23890,"Parmenion","Kampanidis");
-        Doctor doctor4 = new Doctor(24764,"Sotiris","Silalis");
+        Doctor doctor1 = new Doctor(46982, "Axilleas", "Paraskevopoulos");
+        Doctor doctor2 = new Doctor(56788, "Mihalis", "Stravelas");
+        Doctor doctor3 = new Doctor(23890, "Parmenion", "Kampanidis");
+        Doctor doctor4 = new Doctor(24764, "Sotiris", "Silalis");
 
-        Timeslot timeslot1=new Timeslot(new Date(24, Calendar.JUNE,1,10, 40),doctor1);
-        Timeslot timeslot2=new Timeslot(new Date(24, Calendar.JUNE,2,10, 40),doctor1);
-        Timeslot timeslot3=new Timeslot(new Date(24, Calendar.JUNE,3,10, 40),doctor1);
-        Timeslot timeslot4=new Timeslot(new Date(24, Calendar.JUNE,4,10, 40),doctor1);
-        Timeslot timeslot5=new Timeslot(new Date(24, Calendar.JUNE,5,10, 40),doctor1);
-        Timeslot timeslot6=new Timeslot(new Date(24, Calendar.JUNE,6,10, 40),doctor2);
-        Timeslot timeslot7=new Timeslot(new Date(24, Calendar.JUNE,7,10, 40),doctor2);
-        Timeslot timeslot8=new Timeslot(new Date(24, Calendar.JUNE,8,10, 40),doctor2);
-        Timeslot timeslot9=new Timeslot(new Date(24, Calendar.JUNE,9,10, 40),doctor2);
-        Timeslot timeslot10=new Timeslot(new Date(24, Calendar.JUNE,10,10, 40),doctor2);
+        Timeslot timeslot1 = new Timeslot(new Date(24, Calendar.JUNE, 1, 10, 40), doctor1);
+        Timeslot timeslot2 = new Timeslot(new Date(24, Calendar.JUNE, 2, 10, 40), doctor1);
+        Timeslot timeslot3 = new Timeslot(new Date(24, Calendar.JUNE, 3, 10, 40), doctor1);
+        Timeslot timeslot4 = new Timeslot(new Date(24, Calendar.JUNE, 4, 10, 40), doctor1);
+        Timeslot timeslot5 = new Timeslot(new Date(24, Calendar.JUNE, 5, 10, 40), doctor1);
+        Timeslot timeslot6 = new Timeslot(new Date(24, Calendar.JUNE, 6, 10, 40), doctor2);
+        Timeslot timeslot7 = new Timeslot(new Date(24, Calendar.JUNE, 7, 10, 40), doctor2);
+        Timeslot timeslot8 = new Timeslot(new Date(24, Calendar.JUNE, 8, 10, 40), doctor2);
+        Timeslot timeslot9 = new Timeslot(new Date(24, Calendar.JUNE, 9, 10, 40), doctor2);
+        Timeslot timeslot10 = new Timeslot(new Date(24, Calendar.JUNE, 10, 10, 40), doctor2);
 
         vc1.addDoctor(doctor1);
         vc1.addDoctor(doctor2);
 
-        Timeslot timeslot11=new Timeslot(new Date(24, Calendar.JUNE,11,10, 40),doctor3);
-        Timeslot timeslot12=new Timeslot(new Date(24, Calendar.JUNE,12,10, 40),doctor3);
-        Timeslot timeslot13=new Timeslot(new Date(24, Calendar.JUNE,13,10, 40),doctor3);
-        Timeslot timeslot14=new Timeslot(new Date(24, Calendar.JUNE,14,10, 40),doctor3);
-        Timeslot timeslot15=new Timeslot(new Date(24, Calendar.JUNE,15,10, 40),doctor3);
-        Timeslot timeslot16=new Timeslot(new Date(24, Calendar.JUNE,16,10, 40),doctor4);
-        Timeslot timeslot17=new Timeslot(new Date(24, Calendar.JUNE,17,10, 40),doctor4);
-        Timeslot timeslot18=new Timeslot(new Date(24, Calendar.JUNE,18,10, 40),doctor4);
-        Timeslot timeslot19=new Timeslot(new Date(24, Calendar.JUNE,19,10, 40),doctor4);
-        Timeslot timeslot20=new Timeslot(new Date(24, Calendar.JUNE,20,10, 40),doctor4);
+        Timeslot timeslot11 = new Timeslot(new Date(24, Calendar.JUNE, 11, 10, 40), doctor3);
+        Timeslot timeslot12 = new Timeslot(new Date(24, Calendar.JUNE, 12, 10, 40), doctor3);
+        Timeslot timeslot13 = new Timeslot(new Date(24, Calendar.JUNE, 13, 10, 40), doctor3);
+        Timeslot timeslot14 = new Timeslot(new Date(24, Calendar.JUNE, 14, 10, 40), doctor3);
+        Timeslot timeslot15 = new Timeslot(new Date(24, Calendar.JUNE, 15, 10, 40), doctor3);
+        Timeslot timeslot16 = new Timeslot(new Date(24, Calendar.JUNE, 16, 10, 40), doctor4);
+        Timeslot timeslot17 = new Timeslot(new Date(24, Calendar.JUNE, 17, 10, 40), doctor4);
+        Timeslot timeslot18 = new Timeslot(new Date(24, Calendar.JUNE, 18, 10, 40), doctor4);
+        Timeslot timeslot19 = new Timeslot(new Date(24, Calendar.JUNE, 19, 10, 40), doctor4);
+        Timeslot timeslot20 = new Timeslot(new Date(24, Calendar.JUNE, 20, 10, 40), doctor4);
 
         vc2.addDoctor(doctor3);
         vc2.addDoctor(doctor4);
 
-        insured1.selectTimeslot(doctor1,timeslot1);
-        insured2.selectTimeslot(doctor1,timeslot2);
-        insured3.selectTimeslot(doctor2,timeslot6);
-        insured4.selectTimeslot(doctor2,timeslot7);
+        insured1.selectTimeslot(doctor1, timeslot1);
+        insured2.selectTimeslot(doctor1, timeslot2);
+        insured3.selectTimeslot(doctor2, timeslot6);
+        insured4.selectTimeslot(doctor2, timeslot7);
 
-        insured5.selectTimeslot(doctor3,timeslot11);
-        insured6.selectTimeslot(doctor3,timeslot12);
-        insured7.selectTimeslot(doctor4,timeslot19);
-        insured8.selectTimeslot(doctor4,timeslot20);
+        insured5.selectTimeslot(doctor3, timeslot11);
+        insured6.selectTimeslot(doctor3, timeslot12);
+        insured7.selectTimeslot(doctor4, timeslot19);
+        insured8.selectTimeslot(doctor4, timeslot20);
 
         insured2.makeTheVaccination();
         insured3.makeTheVaccination();
@@ -109,8 +108,7 @@ public class Main {
         System.out.println(vc2.availableTimeslotsOfVc());
         System.out.println("");
 
-        System.out.println("Τους εμβολιασμούς (ημερομηνία εμβολιασμού και ονοματεπώνυμο ασφαλισμένου) που " +
-                "πραγματοποίησε κάθε γιατρός, για όλους τους γιατρούς.");
+        System.out.println("Τους εμβολιασμούς (ημερομηνία εμβολιασμού και ονοματεπώνυμο ασφαλισμένου) που " + "πραγματοποίησε κάθε γιατρός, για όλους τους γιατρούς.");
         System.out.println(doctor1.returnTheVaccinationsDone());
         System.out.println(doctor2.returnTheVaccinationsDone());
         System.out.println(doctor3.returnTheVaccinationsDone());
@@ -118,23 +116,11 @@ public class Main {
         System.out.println("");
 
         System.out.println("Τους ασφαλισμένους άνω των 60 ετών που δεν έχουν κλείσει ραντεβού για εμβολιασμό.");
-        for(Insured ins:insureds){
-            if(ins.getVaccinationCoverage()==null && ins.getReservation()==null && Year.now().getValue()-ins.getBirthdate().getYear()>60){
-                System.out.println(ins.getName()+" "+ins.getSurname()+ " AFM: "+ins.getAfm()+" is over 60 and never made a reservation for vaccination");
+        for (Insured ins : insureds) {
+            if (ins.getVaccinationCoverage() == null && ins.getReservation() == null && Year.now().getValue() - ins.getBirthdate().getYear() > 60) {
+                System.out.println(ins.getName() + " " + ins.getSurname() + " AFM: " + ins.getAfm() + " is over 60 and never made a reservation for vaccination");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
         //Merika dika mou test cases
         /*Insured insured1 =new Insured(171054858,82167,"Kostas",new Date(24,Calendar.DECEMBER,4),"Papadopoulos","papadko@gmail.com");
