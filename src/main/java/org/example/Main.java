@@ -4,11 +4,13 @@ import org.example.entities.Doctor;
 import org.example.entities.Insured;
 import org.example.entities.Timeslot;
 import org.example.entities.VaccinationCenter;
+import org.example.utilities.FileUtils;
 
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
 
@@ -86,6 +88,7 @@ public class Main {
         vc2.addDoctor(doctor3);
         vc2.addDoctor(doctor4);
 
+
         insured1.selectTimeslot(doctor1, timeslot1);
         insured2.selectTimeslot(doctor1, timeslot2);
         insured3.selectTimeslot(doctor2, timeslot6);
@@ -104,13 +107,11 @@ public class Main {
         insured8.makeTheVaccination();
 
         System.out.println("Τα επικείμενα ραντεβού για κάθε εμβολιαστικό κέντρο");
-        System.out.println(vc1.returnAllMyReservations());
-        System.out.println(vc2.returnAllMyReservations());
+        System.out.println(vc1.returnAllMyReservations() + "\n" + vc2.returnAllMyReservations());
         System.out.println("");
 
         System.out.println("Τις ελεύθερες χρονικές θυρίδες κάθε εμβολιαστικού κέντρου");
-        System.out.println(vc1.availableTimeslotsOfVc());
-        System.out.println(vc2.availableTimeslotsOfVc());
+        System.out.println(vc1.availableTimeslotsOfVc() + "\n" + vc2.availableTimeslotsOfVc());
         System.out.println("");
 
         System.out.println("Τους εμβολιασμούς (ημερομηνία εμβολιασμού και ονοματεπώνυμο ασφαλισμένου) που " + "πραγματοποίησε κάθε γιατρός, για όλους τους γιατρούς.");
@@ -126,6 +127,7 @@ public class Main {
                 System.out.println(ins.getName() + " " + ins.getSurname() + " AFM: " + ins.getAfm() + " is over 60 and never made a reservation for vaccination");
             }
         }
+        FileUtils.printUpcomingReservations(List.of(vc1, vc2));
 
         //Merika dika mou test cases
         /*Insured insured1 =new Insured(171054858,82167,"Kostas",new Date(24,Calendar.DECEMBER,4),"Papadopoulos","papadko@gmail.com");

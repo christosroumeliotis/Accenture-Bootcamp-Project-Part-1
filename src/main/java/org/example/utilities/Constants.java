@@ -7,6 +7,7 @@ public class Constants {
     public static final int NUMBER_OF_TIMESLOT = 20;
     public static final int NUNBER_OF_RESERVATIONS = 8;
     public static final int NUMBER_OF_VACCINATIONS = 6;
+    public static final String OUTPUT_FILE_NAME = "vaccination-results.txt";
 
     public static final String[] FIRST_NAMES = {"John", "Dimitra", "Michael", "Sophia", "Paris", "Oliver", "George", "Anna", "James", "Helen"};
     public static final String[] LAST_NAMES = {"Papageorgiou", "Tsaklidis", "Fotiadis", "Andriotis", "Paraskeva", "Dionisiou", "Theodorou", "Arvaniti", "Papadopoulou", "Kefala"};
