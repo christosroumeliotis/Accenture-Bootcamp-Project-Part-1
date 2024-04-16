@@ -39,22 +39,18 @@ public class VaccinationCenter {
     }
 
     public String returnAllMyReservations() {
-        String s = "Vaccination center:" + code + " reservations\n";
+        StringBuilder s = new StringBuilder("Vaccination center:" + code + " reservations\n");
         for (Reservation r : reservations) {
-            s += r.returnReservation() + "\n";
+            s.append(r.returnReservation()).append("\n");
         }
-        if (s.length() == 0) {
-            return "No reservations for the vaccination center with code: " + code;
-        } else {
-            return s;
-        }
+        return s.toString();
     }
 
     public String availableTimeslotsOfVc() {
-        String s = "Vaccination center:" + code + " available timeslots\n";
+        StringBuilder s = new StringBuilder("Vaccination center:" + code + " available timeslots\n");
         for (Doctor d : doctors) {
-            s += d.returnMyAvailableTimeslots();
+            s.append(d.returnMyAvailableTimeslots());
         }
-        return s;
+        return s.toString();
     }
 }
