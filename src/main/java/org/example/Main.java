@@ -106,28 +106,29 @@ public class Main {
         insured7.makeTheVaccination();
         insured8.makeTheVaccination();
 
-        System.out.println("Τα επικείμενα ραντεβού για κάθε εμβολιαστικό κέντρο");
+        System.out.println("---Reservations for each vaccination center---");
         System.out.println(vc1.returnAllMyReservations() + "\n" + vc2.returnAllMyReservations());
         System.out.println("");
 
-        System.out.println("Τις ελεύθερες χρονικές θυρίδες κάθε εμβολιαστικού κέντρου");
+        System.out.println("---Available timeslots for each vaccination center---");
         System.out.println(vc1.availableTimeslotsOfVc() + "\n" + vc2.availableTimeslotsOfVc());
         System.out.println("");
 
-        System.out.println("Τους εμβολιασμούς (ημερομηνία εμβολιασμού και ονοματεπώνυμο ασφαλισμένου) που " + "πραγματοποίησε κάθε γιατρός, για όλους τους γιατρούς.");
+        System.out.println("---Vaccinations every doctor made---");
         System.out.println(doctor1.returnTheVaccinationsDone());
         System.out.println(doctor2.returnTheVaccinationsDone());
         System.out.println(doctor3.returnTheVaccinationsDone());
         System.out.println(doctor4.returnTheVaccinationsDone());
         System.out.println("");
 
-        System.out.println("Τους ασφαλισμένους άνω των 60 ετών που δεν έχουν κλείσει ραντεβού για εμβολιασμό.");
+        System.out.println("---Insured over 60 without reservation for vaccination---");
         for (Insured ins : insureds) {
             if (ins.getVaccinationCoverage() == null && ins.getReservation() == null && Year.now().getValue() - ins.getBirthdate().getYear() > 60) {
                 System.out.println(ins.getName() + " " + ins.getSurname() + " AFM: " + ins.getAfm() + " is over 60 and never made a reservation for vaccination");
             }
         }
-        FileUtils.printUpcomingReservations(List.of(vc1, vc2));
+        FileUtils.printResults(List.of(vc1, vc2),List.of(doctor1,doctor2,doctor3,doctor4),insureds);
+
 
         //Merika dika mou test cases
         /*Insured insured1 =new Insured(171054858,82167,"Kostas",new Date(24,Calendar.DECEMBER,4),"Papadopoulos","papadko@gmail.com");
