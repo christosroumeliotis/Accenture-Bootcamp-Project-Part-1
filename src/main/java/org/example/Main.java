@@ -127,7 +127,8 @@ public class Main {
                 System.out.println(ins.getName() + " " + ins.getSurname() + " AFM: " + ins.getAfm() + " is over 60 and never made a reservation for vaccination");
             }
         }
-        FileUtils.printUpcomingReservations(List.of(vc1, vc2));
+        FileUtils.printResults(List.of(vc1, vc2),List.of(doctor1,doctor2,doctor3,doctor4),insureds);
+
 
         //Merika dika mou test cases
         /*Insured insured1 =new Insured(171054858,82167,"Kostas",new Date(24,Calendar.DECEMBER,4),"Papadopoulos","papadko@gmail.com");
