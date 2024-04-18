@@ -1,5 +1,7 @@
 package org.example.entities;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -21,7 +23,13 @@ public class Insured {
         this.name = name;
         this.birthdate = birthdate;
         this.surname = surname;
-        this.email = email;
+        EmailValidator validator= EmailValidator.getInstance();//Validates the email dependency added (invalid email -> program stops)
+        if(validator.isValid(email)){
+            this.email = email;
+        }else{
+            System.out.println("**Wrong type of e-mail");
+            System.exit(0);
+        }
         reservation = null;
     }
 

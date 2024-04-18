@@ -24,23 +24,22 @@ public class FileUtils {
 
 
             FileWriter myWriter = new FileWriter("vaccination-results.txt");
-            myWriter.write("----Τα επικείμενα ραντεβού για κάθε εμβολιαστικό κέντρο----\n");
+            myWriter.write("----Reservations for each vaccination center----\n");
             for (VaccinationCenter vc : vaccinationCenters) {
                 myWriter.write(vc.returnAllMyReservations() + "\n");
             }
 
-            myWriter.write("----Τις ελεύθερες χρονικές θυρίδες κάθε εμβολιαστικού κέντρου----\n");
+            myWriter.write("----Available timeslots for each vaccination center----\n");
             for (VaccinationCenter vc : vaccinationCenters) {
                 myWriter.write(vc.availableTimeslotsOfVc() + "\n");
             }
 
-            myWriter.write("----Τους εμβολιασμούς (ημερομηνία εμβολιασμού και ονοματεπώνυμο ασφαλισμένου) που " +
-                    "πραγματοποίησε κάθε γιατρός, για όλους τους γιατρούς.----\n");
+            myWriter.write("----Vaccinations every doctor made----\n");
             for (Doctor dc : doctors) {
                 myWriter.write(dc.returnTheVaccinationsDone() + "\n");
             }
 
-            myWriter.write("----Τους ασφαλισμένους άνω των 60 ετών που δεν έχουν κλείσει ραντεβού για εμβολιασμό.----\n");
+            myWriter.write("----Insured over 60 without reservation for vaccination.----\n");
             for (Insured ins : insureds) {
                 if (ins.getVaccinationCoverage() == null && ins.getReservation() == null && Year.now().getValue() - ins.getBirthdate().getYear() > 60) {
                     myWriter.write(ins.getName() + " " + ins.getSurname() + " AFM: " + ins.getAfm() + " is over 60 and never made a reservation for vaccination\n");
